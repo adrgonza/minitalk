@@ -22,12 +22,12 @@ int	main(int argc, char **argv)
 		return (write(1, "\033[31mError:\nTry: ./.. 'pid' 'str'", 34));
 	i = 0;
 	while (argv[1][i])
-		if (argv[1][i++] < '0' || argv[1][i] > '9')
+		if ((argv[1][i++] < '0' || argv[1][i] > '9') || i > 9)
 			return (write(1, "\033[31mError: Invalid Pid...\n", 28));
 	i = 0;
 	while (argv[1][i] >= '0' && argv[1][i] <= '9')
 		pid = (argv[1][i++] - '0') + pid * 10;
-	while (*argv[2])
+	while (*argv[2] && pid > 0)
 	{
 		i = 8;
 		while (i--)

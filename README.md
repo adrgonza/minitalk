@@ -22,7 +22,7 @@ To use Minitalk, follow these steps:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/minitalk.git
+    git clone https://github.com/adrgonza/minitalk.git
     ```
 
 2. Build the server and client executables:
